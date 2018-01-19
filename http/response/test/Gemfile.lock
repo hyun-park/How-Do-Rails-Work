@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    get_process_mem (0.2.1)
+    sys-proctable (1.1.5-universal-mingw32)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  get_process_mem
+  sys-proctable
+
+BUNDLED WITH
+   1.14.6
