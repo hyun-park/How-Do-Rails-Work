@@ -22,6 +22,9 @@ Rails Controller에서 클라이언트에 파일을 리턴하는 send_file 메�
 
 - [Rack::Sendfile 참고문서](http://www.rubydoc.info/github/rack/rack/master/Rack/Sendfile)
 
+#### 웹서버가 정적 파일을 처리하면 더 빠른 이유는?
+Nginx를 예를 들면, 원래 빠른 정적파일 리턴을 목표로 두고 설계되었다. 어플리케이션에서도 웹서버 역할을 할 수는 있지만, 이미 어플리케이션은 DB쿼리도 조회하는 등 각종 로직을 수행하느라 WAS에 부하가 가기 때문이다.
+
 ### Rack::Sendfile을 쓸 수 없는 상황 (웹서버에서 제공하지 않을 때)
 이럴 땐 루비에서 파일을 열어서 클라이언트로 스트림으로 보낸다.
 
