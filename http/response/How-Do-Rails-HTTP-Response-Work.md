@@ -23,7 +23,7 @@
 
 #### Rack::Sendfile
 
-Rails Controller에서 클라이언트에 파일을 리턴하는 send_file 메서드는 실제로 Rack::Sendfile가 웹 서버로 하여금 파일을 전송하게 한다. 따라서 어플리케이션이 클라이언트에 파일을 전송하는 것보다 훨씬 더 빠르게 파일을 전송할 수 있다. (X-Sendfile 헤더를 이용함)
+Rails Controller에서 클라이언트에 파일을 리턴하는 send_file 메서드는 실제로 Rack::Sendfile가 웹 서버로 하여금 파일을 전송하게 한다. 따라서 어플리케이션이 클라이언트에 파일을 전송하는 것보다 훨씬 더 빠르게 파일을 전송할 수 있다. Rack은 body가 file인 response를 인터셉트해서 X-Sendfile 헤더를 붙여서 웹서버가 파일을 처리하게 .
 
 - [nginx X-Sendfile 헤더 참고 문서](https://www.nginx.com/resources/wiki/start/topics/examples/xsendfile/)
 
